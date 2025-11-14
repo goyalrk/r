@@ -374,19 +374,7 @@ a:hover, a:focus {
                               </div>
                           </div>
                       </li>
-                      <!-- single item -->
-                      <li class="attorneys conferences">
-                          <div class="bf-single-item"> 
-                              <img src="assets/images/gallery/26.jpg" alt="gallery" style="width: auto; height: 250px;">
-                              <div class="gallery_caption text-center">
-                                  <div class="gl_caption_inner">
-                                      <a class="image-link" href="assets/images/gallery/26.jpg"><img src="assets/images/gallery/4.jpg" alt="style= width: auto; height: 250px;"></a>
-                                  </div>
-                              </div>
-                          </div>
-                      </li>
-                      
-                        <li class="attorneys">
+                      <li class="attorneys">
                           <div class="bf-single-item"> 
                               <img src="assets/images/gallery/26.jpg" alt="gallery">
                               <div class="gallery_caption text-center">
@@ -396,6 +384,18 @@ a:hover, a:focus {
                               </div>
                           </div>
                       </li>
+                      <!-- single item 
+                      <li class="attorneys conferences">
+                          <div class="bf-single-item"> 
+                              <img src="assets/images/gallery/26.jpg" alt="gallery" style="width: auto; height: 250px;">
+                              <div class="gallery_caption text-center">
+                                  <div class="gl_caption_inner">
+                                      <a class="image-link" href="assets/images/gallery/26.jpg"><img src="assets/images/gallery/4.jpg" alt="style= width: auto; height: 250px;"></a>
+                                  </div>
+                              </div>
+                          </div>
+                      </li> -->
+                      <!-- single item -->
                        </li>
                       <li class="attorneys">
                           <div class="bf-single-item"> 
@@ -506,16 +506,7 @@ a:hover, a:focus {
                         </div>
                     </li>
                     <!-- single item -->
-                    <li class="attorneys">
-                        <div class="bf-single-item"> 
-                            <img src="assets/images/gallery/12.jpg" alt="gallery" >
-                            <div class="gallery_caption text-center">
-                                <div class="gl_caption_inner">
-                                    <a class="image-link" href="assets/images/gallery/12.jpg"><img src="assets/images/gallery/12.jpg" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+                   
                     
                     <!-- single item -->
                       <li class="attorneys conferences">
@@ -580,20 +571,31 @@ a:hover, a:focus {
         END GALLERY SECTION
       ============================== -->   
 <style>
-  .bf ul.items li img{border: 3px solid #26B986}
+    /* Uniform gallery grid */
+    .bf ul.items { display:flex; flex-wrap:wrap; gap:18px; padding:0; margin:0; list-style:none; }
+    .bf ul.items li { width: calc(25% - 13.5px); box-sizing: border-box; }
+    .bf-single-item { overflow: hidden; border-radius: 8px; background:#fff; }
+    .bf-single-item img { width:100%; height:220px; object-fit:cover; display:block; border:3px solid #26B986; }
+    .gallery_caption { position:absolute; left:0; top:0; right:0; bottom:0; display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity .2s ease; }
+    .bf-single-item:hover .gallery_caption { opacity:1; background: rgba(0,0,0,0.35); }
+    .gl_caption_inner img { max-width:60px; max-height:60px; }
 
-  .gallery-bg-area {
-    background-color: rgba(0, 0, 0, 0);
-    background-repeat: no-repeat;
-    background-image: url(assets/images/gallery/21.jpg);
-    background-size: cover;
-    background-position: center center;
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    visibility: inherit;
-    
-}
+    /* Responsive breakpoints */
+    @media (max-width: 991px) { .bf ul.items li { width: calc(33.333% - 12px); } }
+    @media (max-width: 767px) { .bf ul.items li { width: calc(50% - 9px); } .bf-single-item img { height:180px; } }
+    @media (max-width: 479px) { .bf ul.items li { width: 100%; } .bf-single-item img { height:200px; } }
+
+    .gallery-bg-area {
+        background-color: rgba(0, 0, 0, 0);
+        background-repeat: no-repeat;
+        background-image: url(assets/images/gallery/21.jpg);
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        visibility: inherit;
+    }
 </style>
 <!-- =========================
         START FOOTER SECTION
