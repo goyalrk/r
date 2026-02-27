@@ -78,8 +78,8 @@
                                                   
                         </li>
                         <li><a href="education-and-experience.html">Education & Experience</a></li>
-                        <li><a href="research-interests-and-expertise.html">Research Interests & Expertise</a></li>
-                        <li><a href="publications-and-patents.html">Publications & Patents</a></li>
+                        <li><a href="research-interests-and-expertise.html">Research Interests & Skills</a></li>
+                        <li><a href="publications-and-patents.html">Publications </a></li>
                         
                       <!--  <li><a href="awards.html">Awards</a></li> -->
                         <!--<li><a href="co-researchers.html">co-researchers</a></li> 
@@ -261,7 +261,73 @@ a:hover, a:focus {
 }
 
 }
-       </style>
+
+/* Current Status card styles */
+.current-status-card {
+   background: linear-gradient(135deg, #f8fffe 0%, #f0faf8 100%) !important;
+   padding: 28px !important;
+   border-radius: 12px !important;
+   box-shadow: 0 4px 18px rgba(0,0,0,0.06) !important;
+   border-left: 6px solid #1BB580 !important;
+}
+.current-status-card h3 {
+   font-size: 22px !important;
+   color: #1BB580 !important;
+   margin: 0 0 6px 0 !important;
+}
+.current-status-card h4 {
+   font-size: 18px !important;
+   margin: 6px 0 !important;
+}
+.current-status-card p {
+   font-size: 16px !important;
+   color: #333 !important;
+   margin: 6px 0 !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .current-status-card { padding: 18px !important; }
+  .current-status-card h3 { font-size: 18px !important; }
+  .current-status-card h4, .current-status-card p { font-size: 15px !important; }
+}
+
+/* Layout for current status: logo left, text right */
+.current-status-inner {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+}
+.current-status-logo {
+   flex: 0 0 auto;
+}
+.edu-logo-left {
+   width: 120px;
+   height: auto;
+   object-fit: contain;
+   display: block;
+}
+.current-status-content {
+   flex: 1 1 auto;
+}
+.current-status-header h3 {
+   margin: 0;
+   color: #1BB580;
+   font-size: 22px;
+}
+.current-status-header .status-dates {
+   color: #777;
+   font-weight: 700;
+   text-transform: uppercase;
+   font-size: 12px;
+}
+
+@media only screen and (max-width: 768px) {
+   .current-status-inner { flex-direction: column; text-align: center; }
+   .edu-logo-left { width: 100px; margin-bottom: 10px; }
+   .current-status-header h3 { font-size: 18px; }
+}
+
+      </style>
  <!-- =========================
         START PAGE TITLE SECTION
       ============================== -->
@@ -287,10 +353,76 @@ a:hover, a:focus {
       <!-- =========================
         END PAGE TITLE SECTION
       ============================== -->
- 
-
 <!-- =========================
-        START SERVICE 6 SECTION
+        START Project SECTION - VERTICAL TIMELINE
+      ============================== -->
+
+      <!-- Current Status (styled like the Education first section) -->
+      <section class="welcome-area">
+         <div class="main-title welcome-main-title">
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-12">
+                     <div class="main-title-content text-center">
+                        <h2>Current Status</h2>
+                        <p style="font-size: 18px; color: #333; margin-top: 10px;"></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section id="fellowships-awards" class="service-area service-no-padding-btm">
+         <style>
+            /* Fellowship & Awards - larger, higher-contrast text */
+            /* apply to either id or class variant */
+            #fellowships-awards, .fellowships-awards {}
+            #fellowships-awards h3, .fellowships-awards h3 { font-size: 26px !important; color: #222 !important; }
+            #fellowships-awards .card-award h4, .fellowships-awards .card-award h4 { font-size: 20px !important; color: #1BB580 !important; margin-bottom: 10px; }
+            #fellowships-awards .card-award p, .fellowships-awards .card-award p { font-size: 16px !important; color: #333 !important; line-height: 1.65 !important; }
+            #fellowships-awards .card-award p strong, .fellowships-awards .card-award p strong { color: #111 !important; }
+            #fellowships-awards .card-award, .fellowships-awards .card-award { min-height: 260px; }
+            /* fallback/global rules in case section isn't marked */
+            .card-award h4 { font-size: 20px !important; color: #1BB580 !important; }
+            .card-award p { font-size: 16px !important; color: #333 !important; line-height: 1.65 !important; }
+            .service-area .col-sm-12 > h3 { font-size: 24px !important; color: #222 !important; }
+            @media only screen and (max-width: 768px){
+               #fellowships-awards h3, .fellowships-awards h3 { font-size: 22px !important; }
+               #fellowships-awards .card-award h4, .fellowships-awards .card-award h4 { font-size: 18px !important; }
+               #fellowships-awards .card-award p, .fellowships-awards .card-award p { font-size: 15px !important; }
+            }
+         </style>
+         <div class="service-content-area">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="current-status-card">
+                        <div class="current-status-inner">
+                           <div class="current-status-logo">
+                              <img src="assets/images/gallery/education4.png" alt="Notre Dame Logo" class="edu-logo-left">
+                           </div>
+                           <div class="current-status-content">
+                              <div class="current-status-header">
+                                 <h3>PhD Student — <small class="status-dates">Aug 2025 - Present</small></h3>
+                              </div>
+                              <div class="current-status-body">
+                                 <h4>Electrical Engineering and Materials Science and Engineering, University of Notre Dame, USA</h4>
+                                 <p>Research Topic: THz emission from altermagnetism materials</p>
+                                 <p>Supervisor: Prof. Ranjan Singh, Department of Electrical Engineering, University of Notre Dame</p>
+                                 <p><strong>Skills:</strong> THz spintronics, altermagnetism, device fabrication and characterization, cleanroom, sputtering, lithography</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- =========================
+<!-- =========================
+        START SERVICE 6 SECTION - VERTICAL TIMELINE
       ============================== -->
       <section class="welcome-area">
     <div class="main-title welcome-main-title">
@@ -300,9 +432,121 @@ a:hover, a:focus {
                     <div class="main-title-content text-center">
                         <!-- <h3>Free & rightful advice!</h3> -->
                         <h2>Education</h2>
-                        <p style="color: black;">
-                           Start a journey where education and experience come together, making you more capable and accomplished.
-                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+      <section class="service-area service-no-padding-btm fellowships-awards">
+         <div class="service-content-area">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="timeline-horizontal">
+                        <!-- Timeline Item 1: PhD (Latest) -->
+                        <div class="timeline-item-h">
+                           <div class="timeline-marker-h">
+                              <div class="timeline-dot-h timeline-dot-current"></div>
+                           </div>
+                           <div class="timeline-content-h timeline-content-current">
+                              <div style="text-align: center; margin-bottom: 15px; padding: 10px 0; border-bottom: 2px solid #1BB580;">
+                                 <img src="assets/images/gallery/education4.png" alt="Notre Dame Logo" style="max-width: 60px; max-height: 60px; object-fit: contain;">
+                              </div>
+                              <div class="timeline-header-h">
+                                 <h3>Doctor of Philosophy (PhD)</h3>
+                                 <span class="timeline-year-h">2025 - Present</span>
+                              </div>
+                              <div class="timeline-body-h">
+                                 <h4>University of Notre Dame</h4>
+                                 <p class="timeline-desc-h"><strong>USA</strong></p>
+                                 <p class="timeline-desc-h">Electrical Engineering & Materials Science</p>
+                              </div>
+                           </div>
+                        </div>
+
+                        <!-- Timeline Item 2: M.Tech -->
+                        <div class="timeline-item-h">
+                           <div class="timeline-marker-h">
+                              <div class="timeline-dot-h"></div>
+                           </div>
+                           <div class="timeline-content-h">
+                              <div style="text-align: center; margin-bottom: 15px; padding: 10px 0; border-bottom: 2px solid #1BB580;">
+                                 <img src="assets/images/gallery/education1.png" alt="Notre Dame Logo" style="max-width: 60px; max-height: 60px; object-fit: contain;">
+                              </div>
+                              <div class="timeline-header-h">
+                                 <h3>Master of Technology</h3>
+                                 <span class="timeline-year-h">2023 - 2025</span>
+                              </div>
+                              <div class="timeline-body-h">
+                                 <h4>Indian Institute of Technology (IIT) Jodhpur</h4>
+                                 <p class="timeline-desc-h"><strong>India</strong></p>
+                                 <p class="timeline-desc-h">Quantum Technologies & Quantum Devices</p>
+                              </div>
+                           </div>
+                        </div>
+
+                        <!-- Timeline Item 3: M.Sc -->
+                        <div class="timeline-item-h">
+                           <div class="timeline-marker-h">
+                              <div class="timeline-dot-h"></div>
+                           </div>
+                           <div class="timeline-content-h">
+                              <div style="text-align: center; margin-bottom: 15px; padding: 10px 0; border-bottom: 2px solid #1BB580;">
+                                 <img src="assets/images/gallery/education2.png" alt="Notre Dame Logo" style="max-width: 60px; max-height: 60px; object-fit: contain;">
+                              </div>
+                              <div class="timeline-header-h">
+                                 <h3>Master of Science (M.Sc)</h3>
+                                 <span class="timeline-year-h">2021 - 2023</span>
+                              </div>
+                              <div class="timeline-body-h">
+                                 <h4>National Institute of Technology (NIT) Rourkela</h4>
+                                 <p class="timeline-desc-h"><strong>India</strong></p>
+                                 <p class="timeline-desc-h">Physics - Condensed Matter</p>
+                              </div>
+                           </div>
+                        </div>
+
+                        <!-- Timeline Item 4: B.Sc -->
+                        <div class="timeline-item-h">
+                           <div class="timeline-marker-h">
+                              <div class="timeline-dot-h"></div>
+                           </div>
+                           <div class="timeline-content-h">
+                              <div style="text-align: center; margin-bottom: 15px; padding: 10px 0; border-bottom: 2px solid #1BB580;">
+                                 <img src="assets/images/gallery/education3.png" alt="Notre Dame Logo" style="max-width: 60px; max-height: 60px; object-fit: contain;">
+                              </div>
+                              <div class="timeline-header-h">
+                                 <h3>Bachelor of Science (B.Sc)</h3>
+                                 <span class="timeline-year-h">2018 - 2021</span>
+                              </div>
+                              <div class="timeline-body-h">
+                                 <h4>Ramjas College</h4>
+                                 <p class="timeline-desc-h"><strong>University of Delhi (DU)</strong></p>
+                                 <p class="timeline-desc-h"><strong>India</strong></p>
+                                 <p class="timeline-desc-h">Physical Sciences</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>      
+      </section>
+      <!-- =========================
+        END SERVICE 6 SECTION - HORIZONTAL TIMELINE
+      ============================== -->
+      <!-- =========================
+        START Project SECTION - VERTICAL TIMELINE
+      ============================== -->
+      <section class="welcome-area">
+    <div class="main-title welcome-main-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="main-title-content text-center">
+                        <h2>Major Research Projects</h2>
                     </div>
                 </div>
             </div>
@@ -311,335 +555,250 @@ a:hover, a:focus {
 </section>
       <section class="service-area service-no-padding-btm">
          <div class="service-content-area">
-            <div class="container-fluid">
+            <div class="container">
                <div class="row">
-                  <div class="col-md-12 no-padding">
-                     <div id="service-6-slider" class="owl-carousel all-carousel owl-theme">
-                     <div class="service-6-content-single service4 text-center">
-                           <div class="service-6-content-img">
-                              <div class="service-6-content-icon">
-                                 <span class="icon icon-ChartUp"></span>
-                                 <h2>Doctor of Philosophy  <br> (PhD)</h2>
-                                 <p>2025-Present</p>                            
-                                 <p style="margin-top:25px;">University of Notre Dame, USA</p>                            
-                              </div>
+                  <div class="col-md-12">
+                     <div class="timeline-vertical">
+                        <!-- Project Item 1 -->
+                        <div class="timeline-item-v">
+                           <div class="timeline-marker-v">
+                              <div class="timeline-dot-v"></div>
                            </div>
-                           <div class="service-6-content-text read-more-btn">
-                              <p>Electrical Engineering and Materials Science and Engineering</p>
-                              
+                           <div class="timeline-content-v">
+                              <div class="timeline-header-v">
+                                 <h3>Photodetectors for Quantum Communication: Schottky and Avalanche Devices</h3>
+                                 <span class="timeline-year-v">April 2024 - May 2025</span>
+                              </div>
+                              <div class="timeline-body-v">
+                                 <h4>Master Thesis | Indian Institute of Technology (IIT) Jodhpur, India</h4>
+                                 <p class="timeline-desc-v">Supervisor: Prof. Harshit Agarwal & Dr. Pragya Kushwaha, Department of Electrical Engineering, IIT Jodhpur, India</p>
+                                 <p class="timeline-desc-v"><strong>Skills:</strong> Lumerical, Device fabrication and characterization, Photonics</p>
+                              </div>
                            </div>
                         </div>
 
+                        <!-- Project Item 2 -->
+                        <div class="timeline-item-v">
+                           <div class="timeline-marker-v">
+                              <div class="timeline-dot-v"></div>
+                           </div>
+                           <div class="timeline-content-v">
+                              <div class="timeline-header-v">
+                                 <h3>Structural, Dielectric, Ferroelectric and Electrical Properties of Lead-free K₀.₅Bi₀.₅TiO₃-BaTiO₃ Ceramic</h3>
+                                 <span class="timeline-year-v">July 2022 - May 2023</span>
+                              </div>
+                              <div class="timeline-body-v">
+                                 <h4>Master Thesis| National Institute of Technology (NIT) Rourkela, India</h4>
+                                 <p class="timeline-desc-v">Supervisor: Prof. Dillip K. Pradhan, Department of Physics, NIT Rourkela, India</p>
+                                 <p class="timeline-desc-v"><strong>Skills:</strong> Rietweld Refinement, Impedance & Dielectric Spectroscopy, Material synthesis</p>
+                              </div>
+                           </div>
+                        </div>
 
-                        <div class="service-6-content-single service1 service-6-content-2   text-center">
-                           <div class="service-6-content-img">
-                              <div class="service-6-content-icon">
-                                 <span class="icon icon-Calculator"></span>
-                                 <h2>Master of Technology (M.Tech)</h2>
-                                 <p>2023-2025</p>                            
-                                 <p style="margin-top:25px;">IIT Jodhpur,India</p>                            
+                        <!-- Project Item 3 -->
+                        <div class="timeline-item-v">
+                           <div class="timeline-marker-v">
+                              <div class="timeline-dot-v"></div>
+                           </div>
+                           <div class="timeline-content-v">
+                              <div class="timeline-header-v">
+                                 <h3>Synthesis and characterization of Thin Film inorganic Perovskite Materials for Photovoltaics Applications</h3>
+                                 <span class="timeline-year-v">Aug 2021 - July 2022</span>
                               </div>
-                           </div>
-                           <div class="service-6-content-text read-more-btn">
-                              <p>Quantum Technologies focused on Quantum devices and sensors</p>
-                             
-                           </div>
-                        </div>
-                        
-                        <div class="service-6-content-single service2 text-center">
-                           <div class="service-6-content-img">
-                              <div class="service-6-content-icon">
-                                 <span class="icon icon-ChartUp"></span>
-                                 <h2>Master of Science <br> (M.Sc)</h2>
-                                 <p>2021-2023</p>                            
-                                 <p style="margin-top:25px;">NIT Rourkela,India</p>                            
+                              <div class="timeline-body-v">
+                                 <h4>Research Project | National Institute of Technology (NIT) Rourkela, India</h4>
+                                 <p class="timeline-desc-v">Supervisor: Prof. Pawan Kumar, Department of Physics, NIT Rourkela, India</p>
+                                 <p class="timeline-desc-v"><strong>Skills:</strong> Thin Film Deposition, XRD, Raman, PL spectroscopy</p>
                               </div>
-                           </div>
-                           <div class="service-6-content-text read-more-btn">
-                              <p>Physics focused on Experimental Condensed Matter Physics</p>
-                              
-                           </div>
-                        </div>
-                        <div class="service-6-content-single service3 service-6-content-3 text-center">
-                           <div class="service-6-content-img">
-                              <div class="service-6-content-icon">
-                                 <span class="icon icon-Podium"></span>
-                                 <h2>Bachelor of Science <br> (B.Sc)</h2>
-                                 <p>2018-2021</p>                            
-                                 <p style="margin-top:25px;">Ramjas College,University of Delhi,India</p>                            
-                              </div>
-                           </div>
-                           <div class="service-6-content-text read-more-btn">
-                              <p><span style="font-weight:bold;">Branch </span><br>
-                              Physical Sciences </p>
-                              
                            </div>
                         </div>
                      </div>
-                  </div> 
+                  </div>
                </div>
             </div>
          </div>      
       </section>
       <!-- =========================
-        END SERVICE 6 SECTION
-      ============================== -->
-      <!-- =========================
-        START Project SECTION
-      ============================== -->
-      <section class="box-area blog-area blog-page-area bg-type-2">
-         <div class="main-title main-title-eduction" >
-            <div class="container">
-               <div class="row">
-                  <div class="col-sm-12">
-                     <div class="main-title-content text-center">
-                        <!-- <h3>Free & rightful advice!</h3> -->
-                        <h2>Major Research Projects</h2>
-                        <!-- <p style="color: black;">Beyond Moments: Craft Your Unforgettable Experience with Us</p> -->
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="blog-content-area">
-            <div class="container">
-                   <div class="row">
-                   <div class="col-sm-6 col-md-3 experience-box">
-                     <div class="blog-content-single box animate fadeInUp one box-height" >
-                        
-                        <div class="blog-text">
-                           <h2><a>Current (Master Thesis)</a></h2>
-                           <ul class="ul-class">
-                              <li style="font-size: 15px;">Duration:  April 2024- May 2025</li>
-                               <li style="margin-top: 10px;">
-                                 <a > Master Student, Indian Institute of Technology (IITJ) Jodhpur</a>                                                             
-                           <p class="box-ptag"><span style="font-weight: bold; color:black;">Title:</span>  
-                              Simulation, optimization and Fabrication of Single Photon Detector for Quantum
-                              Communication </p>
-                              <p class="box-ptag"><span style="font-weight: bold; color:black;">Skills:</span>  
-                                 Simulation and optimization by Lumerical, Quantum efficiency, Device fabrication, Photonics  </p>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-md-1 arrow-class">
-                  </div>               
-                  <div class="col-sm-6 col-md-3 experience-box">
-                     <div class="blog-content-single box animate fadeInUp one box-height" >
-
-                        <div class="blog-text">
-                           <h2><a>Previously (Master Thesis)</a></h2>
-                           <ul class="ul-class">
-                              <li style="font-size: 15px;">Duration: July 2022- May 2023</li>
-                              <li style="margin-top: 10px;">
-                                 <a>National Institute of Technology (NITRKL) Rourkela</a>                            
-                           <p class="box-ptag"><span style="font-weight: bold; color:black;">Title:</span> Studies of Structural, Dielectric, Ferroelectric and Electrical Properties of Lead-free (1 −x) K0.5Bi0.5TiO3 − xBaTiO3 Ceramic</p>
-                           <p class="box-ptag"><span style="font-weight: bold; color:black;">Skills:</span> Rietweld Refinement, Impedance and Dielectric Spectroscopy, Material synthesis </p>
-                        </div>
-                     </div>
-                  </div>
-                   <div class="blog-content-area">
-                     <div class="container">
-                     <div class="row">   
-                  
-                  <div class="col-sm-6 col-md-3 experience-box">
-                     <div class="blog-content-single box animate fadeInUp one box-height">
-                       
-                        <div class="blog-text">
-                           <h2><a>Previously</a></h2>
-                           <ul class="ul-class">
-                              <li style="font-size: 15px;">Duration: Aug 2021-  July 2022</li>
-                              <li style="margin-top: 10px;">
-                                 <a>National Institute of Technology (NITRKL) Rourkela</a>                            
-                           <p class="box-ptag"><span style="font-weight: bold; color:black;">Title:</span> Synthesis and characterization of Thin Film inorganic Perovskite Materials for different type of Photovoltaics Applications. </p>
-                           <p class="box-ptag"><span style="font-weight: bold; color:black;">Skills:</span> Thin Film Deposition Techniques,  Characterization XRD, Ramam, PL spectra</p>
-                        </div>
-                     </div>
-                  </div>                                                                                                                  
-               </div>
-            </div>                        
-         </div>
-      </section>
-      <!-- =========================
         END BLOG SECTION
       ============================== -->
       <!-- =========================
-        START BLOG SECTION
+        START RESEARCH INTERNSHIPS SECTION
       ============================== -->
-      <section class="box-area blog-area blog-page-area bg-type-2">
-         <div class="main-title main-title-eduction" >
+      <section class="welcome-area">
+         <div class="main-title welcome-main-title">
             <div class="container">
                <div class="row">
                   <div class="col-sm-12">
                      <div class="main-title-content text-center">
-                        <!-- <h3>Free & rightful advice!</h3> -->
                         <h2>Research Internships</h2>
-                        <!-- <p style="color: black;">Beyond Moments: Craft Your Unforgettable Experience with Us</p> -->
                      </div>
                   </div>
                </div>
             </div>
          </div>
-         <div class="blog-content-area">
+      </section>
+      <section class="service-area service-no-padding-btm">
+         <div class="service-content-area">
             <div class="container">
-
                <div class="row">
-                   <div class="col-sm-6 col-md-3 experience-box">
-                     <div class="blog-content-single box animate fadeInUp one box-height" >
-                        
-                        <div class="blog-text">
-                           <h2><a>Previously</a></h2>
-                           <ul class="ul-class">
-                              <li style="font-size: 15px;">Duration:  May 2023- July 2023</li>
-                               <li style="margin-top: 10px;">
-                                 <a> Research Fellow, LASC (Industry), Gandhinagar, India</a>                                                             
-                           <p class="box-ptag"><span style="font-weight: bold; color:black;">Title:</span>  
-                              Enhancing Electrical Properties of Mixed Halide Perovskites through Machine Learning Enhanced Synthesis and Characterization  </p>
-                              <p class="box-ptag"><span style="font-weight: bold; color:black;">Skills:</span>  
-                                 Machine Learning, Data Science </p>
+                  <div class="col-md-12">
+                     <div class="timeline-vertical">
+                        <!-- Internship Item 1 -->
+                        <div class="timeline-item-v">
+                           <div class="timeline-marker-v">
+                              <div class="timeline-dot-v"></div>
+                           </div>
+                           <div class="timeline-content-v">
+                              <div class="timeline-header-v">
+                                 <h3>Enhancing Electrical Properties of Mixed Halide Perovskites through Machine Learning Enhanced Synthesis and Characterization</h3>
+                                 <span class="timeline-year-v">May 2023 - July 2023</span>
+                              </div>
+                              <div class="timeline-body-v">
+                                 <h4>Research Fellow | LASC (Industry), Gandhinagar, India</h4>
+                                 <p class="timeline-desc-v"><strong>Skills:</strong> Machine Learning, Data Science</p>
+                              </div>
+                           </div>
                         </div>
-                        
-                     </div>
-                  </div>
-                  <div class="col-md-1 arrow-class">
-                  
-                  </div>
-                  <div class="col-sm-6 col-md-3 experience-box">
-                     <div class="blog-content-single box animate fadeInUp one box-height" >
-                        
-                        <div class="blog-text">
-                           <h2><a>Previously</a></h2>
-                           <ul class="ul-class">
-                              <li style="font-size: 15px;">Duration:  Dec 2022- Jan 2023</li>
-                              <li style="margin-top: 10px;">
-                                 <a>Reserach Intern, PDEU, Gandhinagar, India</a>                                                                                       
-                           <p class="box-ptag"><span style="font-weight: bold; color:black;">Title:</span> Synthesis and Characterization of Thin Film and Single Crystal Perovskites for Photovoltaic applications.</p>
-                           <p class="box-ptag"><span style="font-weight: bold; color:black;">Skills:</span> Single Crystal synthesis, Basic Characterization I-V, C-V, Impedance Measurements</p>
-                        </div>
-                     </div>
-                  </div>
-                   <div class="col-md-1 arrow-class">
-                 
-                  </div>
 
-                  <div class="col-sm-6 col-md-3 experience-box">
-                     <div class="blog-content-single box animate fadeInUp one box-height">
-                       
-                        <div class="blog-text">
-                           <h2><a >Previously</a></h2>
-                           <ul class="ul-class">
-                              <li style="font-size: 15px;">Duration: May 2022-  July 2022</li>
-                              <li style="margin-top: 10px;">
-                                 <a>Research Intern, Indian Institute of Technology IIT Roorkee</a>                                                                                         
-                           <p class="box-ptag"><span style="font-weight: bold; color:black;">Title:</span> Studies of Structural, Microstructural, Dielectric and Ferroelectric Properties of Lead-free Ba0.85Sr0.15TiO3 solid solution with doping of ZnO.</p>
-                           <p class="box-ptag"><span style="font-weight: bold; color:black;">Skills:</span> Material Synthesis and Basic Characterization XRD, FESEM, P-E Loop, Dielectric Study</p>
+                        <!-- Internship Item 2 -->
+                        <div class="timeline-item-v">
+                           <div class="timeline-marker-v">
+                              <div class="timeline-dot-v"></div>
+                           </div>
+                           <div class="timeline-content-v">
+                              <div class="timeline-header-v">
+                                 <h3>Synthesis and Characterization of Thin Film and Single Crystal Perovskites for Photovoltaic Applications</h3>
+                                 <span class="timeline-year-v">Dec 2022 - Jan 2023</span>
+                              </div>
+                              <div class="timeline-body-v">
+                                 <h4>Research Intern | PDEU, Gandhinagar, India</h4>
+                                 <p class="timeline-desc-v"><strong>Skills:</strong> Single Crystal synthesis, Basic Characterization I-V, C-V, Impedance Measurements</p>
+                              </div>
+                           </div>
+                        </div>
+
+                        <!-- Internship Item 3 -->
+                        <div class="timeline-item-v">
+                           <div class="timeline-marker-v">
+                              <div class="timeline-dot-v"></div>
+                           </div>
+                           <div class="timeline-content-v">
+                              <div class="timeline-header-v">
+                                 <h3>Studies of Structural, Microstructural, Dielectric and Ferroelectric Properties of Lead-free Ba₀.₈₅Sr₀.₁₅TiO₃ Solid Solution with Doping of ZnO</h3>
+                                 <span class="timeline-year-v">May 2022 - July 2022</span>
+                              </div>
+                              <div class="timeline-body-v">
+                                 <h4>Research Intern | Indian Institute of Technology (IIT) Roorkee, India</h4>
+                                 <p class="timeline-desc-v"><strong>Skills:</strong> Material Synthesis and Basic Characterization XRD, FESEM, P-E Loop, Dielectric Study</p>
+                              </div>
+                           </div>
                         </div>
                      </div>
-                  </div>                                                                                                                                     
+                  </div>
                </div>
-            </div>                        
-         </div> 
+            </div>
+         </div>      
       </section>
       <!-- =========================
-        END BLOG SECTION
+        END RESEARCH INTERNSHIPS SECTION
       ============================== -->
 
 <!-- =========================
-        START ACCORDION SECTION
+        START FELLOWSHIPS & AWARDS SECTION
       ============================== -->
-      <!-- <div class="call-in-action-all"></div> -->
-      <section class="accordion-area bg-type-2" style="background: #eee;">
-         <!-- MAIN TITLE -->
-         <div class="main-title">
+      <section class="welcome-area">
+         <div class="main-title welcome-main-title">
             <div class="container">
                <div class="row">
                   <div class="col-sm-12">
                      <div class="main-title-content text-center">
-                        <!-- <h3>All about us!</h3> -->
-                        <h2>FELLOWSHIP & AWARDS</h2>
-                        <!--p style="color: black;">Connecting Minds, Creating Bonds: Explore the Essence of Fellowship.</p> -->
+                        <h2> Fellowships & Awards</h2>
                      </div>
                   </div>
                </div>
             </div>
-         </div> <!-- END MAIN TITLE --> 
-         <div class="accordion-content">
+         </div>
+      </section>
+      <section class="service-area service-no-padding-btm">
+         <div class="service-content-area">
             <div class="container">
-                           <div class="accordion-right-content-inner">
-                              <h2>Aug 2025- Present</h2>
-                              <p> Teaching Assistantship by University of Notre Dame, USA.</p>
-                           </div>   
-                        </div>
-                     </div>
-                  </div> 
-               </div>
-            <div class="container">
-                           <div class="accordion-right-content-inner">
-                              <h2>Jan 2024- May 2025</h2>
-                              <p> Junior Research Fellowship by Council of Scientific and Industrial Research (CSIR) India at IIT Jodhpur.</p>
-                           </div>   
-                        </div>
-                     </div>
-                  </div> 
-               </div>
-            </div>
-         </div>
-         
-         <div class="container">
-               <div class="accordion-right-content-inner">
-                  <h2>July 2023- Dec 2023</h2>
-                 <p>   Indian National Scholarship of Ministry of human Resource and Development (MHRD) to pursue Master in Technology (MTech.) at IIT Jodhpur.</p>  
-                       </div>   
-                        </div>
-                     </div>
-                  </div> 
-               </div>
-            </div>
-         </div>
-
-      </div>
-         
-      <div class="container">
-            <div class="accordion-right-content-inner">
-               <h2>Oct 2023</h2>
-              <p>   Joint CSIR-UGC National Eligibility Test (NET)</span> for <span style="font-weight: bold;">Junior Research Fellowship (JRF) and Eligibility for Lectureship (LS)/Assistant Professor.</p>  
-                    </div>   
-                     </div>
-                  </div>
-               </div> 
-            </div>
-         </div>
-      </div>
-      
-   </div>
-         
-   <div class="container">
-         <div class="accordion-right-content-inner">
-            <h2>GATE 2021, 2022, 2023</h2>
-           <p>   Qualified <span style="font-weight: bold;">Graduate Aptitude Test in Engineering</span> (GATE) in <span style="font-weight: bold;">Physics.</span></p>  
-                 </div>   
+               <!-- Fellowships Section -->
+               <div class="row" style="margin-bottom: 40px;">
+                  <div class="col-sm-12">
+                     <h3 style="text-align: center; margin-bottom: 30px; font-size: 22px; color: #333;">Fellowships</h3>
                   </div>
                </div>
-            </div> 
-         </div>
-      </div>
-   </div>
+               <div class="row">
+                  <!-- Fellowship Card 1 -->
+                  <div class="col-md-4 col-sm-6" style="margin-bottom: 30px; display: flex;">
+                     <div class="card-award" style="background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-top: 4px solid #1BB580; height: 280px; width: 100%; display: flex; flex-direction: column;">
+                        <h4 style="color: #1BB580; margin-bottom: 8px;">Graduate Teaching Assistantship</h4>
+                        <p style="color: #666; font-size: 14px; margin-bottom: 12px;"><strong>Aug 2025 - Present</strong></p>
+                        <p style="color: #333; margin-bottom: 10px;"><strong>University of Notre Dame, USA</strong></p>
+                        <p style="color: #666; font-size: 14px; line-height: 1.6; flex-grow: 1;">Supporting graduate-level instruction and research in Electrical Engineering and Materials Science.</p>
+                     </div>
+                  </div>
 
-</div>
-         
-<div class="container">
-      <div class="accordion-right-content-inner">
-         <h2> 2021 </h2>
-        <p>   Joint Admission Test for MSc. (Jam) in Physics.</p>  
-              </div>   
+                  <!-- Fellowship Card 2 -->
+                  <div class="col-md-4 col-sm-6" style="margin-bottom: 30px; display: flex;">
+                     <div class="card-award" style="background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-top: 4px solid #1BB580; height: 280px; width: 100%; display: flex; flex-direction: column;">
+                        <h4 style="color: #1BB580; margin-bottom: 8px;">Junior Research Fellowship (JRF)</h4>
+                        <p style="color: #666; font-size: 14px; margin-bottom: 12px;"><strong>Jan 2024 - May 2025</strong></p>
+                        <p style="color: #333; margin-bottom: 10px;"><strong>CSIR, India</strong></p>
+                        <p style="color: #666; font-size: 14px; line-height: 1.6; flex-grow: 1;">Awarded for pursuing research at Indian Institute of Technology (IIT) Jodhpur, India.</p>
+                     </div>
+                  </div>
+
+                  <!-- Fellowship Card 3 -->
+                  <div class="col-md-4 col-sm-6" style="margin-bottom: 30px; display: flex;">
+                     <div class="card-award" style="background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-top: 4px solid #1BB580; height: 280px; width: 100%; display: flex; flex-direction: column;">
+                        <h4 style="color: #1BB580; margin-bottom: 8px;">Indian National Scholarship (MHRD)</h4>
+                        <p style="color: #666; font-size: 14px; margin-bottom: 12px;"><strong>July 2023 - Dec 2023</strong></p>
+                        <p style="color: #333; margin-bottom: 10px;"><strong>Ministry of Education, India</strong></p>
+                        <p style="color: #666; font-size: 14px; line-height: 1.6; flex-grow: 1;">Merit-based scholarship for Master in Technology (M.Tech) at IIT Jodhpur.</p>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Awards Section -->
+               <div class="row" style="margin-top: 50px; margin-bottom: 40px;">
+                  <div class="col-sm-12">
+                     <h3 style="text-align: center; margin-bottom: 30px; font-size: 22px; color: #333;"> Achievements & Awards</h3>
+                  </div>
+               </div>
+               <div class="row">
+                  <!-- Award Card 1 -->
+                  <div class="col-md-4 col-sm-6" style="margin-bottom: 30px; display: flex;">
+                     <div class="card-award" style="background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-top: 4px solid #1BB580; height: 280px; width: 100%; display: flex; flex-direction: column;">
+                        <h4 style="color: #1BB580; margin-bottom: 8px;">CSIR-UGC National Eligibility Test (NET)</h4>
+                        <p style="color: #666; font-size: 14px; margin-bottom: 12px;"><strong>Oct 2023</strong></p>
+                        <p style="color: #666; font-size: 14px; line-height: 1.6; flex-grow: 1;">Qualified for <strong>Junior Research Fellowship (JRF)</strong> and <strong>Eligibility for Lectureship (LS)/Assistant Professor</strong> in Physical Sciences.</p>
+                     </div>
+                  </div>
+
+                  <!-- Award Card 2 -->
+                  <div class="col-md-4 col-sm-6" style="margin-bottom: 30px; display: flex;">
+                     <div class="card-award" style="background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-top: 4px solid #1BB580; height: 280px; width: 100%; display: flex; flex-direction: column;">
+                        <h4 style="color: #1BB580; margin-bottom: 8px;">Graduate Aptitude Test in Engineering (GATE)</h4>
+                        <p style="color: #666; font-size: 14px; margin-bottom: 12px;"><strong>2021, 2022, 2023</strong></p>
+                        <p style="color: #666; font-size: 14px; line-height: 1.6; flex-grow: 1;">Qualified <strong>GATE in Physics</strong> with competitive rankings across multiple attempts.</p>
+                     </div>
+                  </div>
+
+                  <!-- Award Card 3 -->
+                  <div class="col-md-4 col-sm-6" style="margin-bottom: 30px; display: flex;">
+                     <div class="card-award" style="background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-top: 4px solid #1BB580; height: 280px; width: 100%; display: flex; flex-direction: column;">
+                        <h4 style="color: #1BB580; margin-bottom: 8px;">Joint Admission Test for MSc (JAM)</h4>
+                        <p style="color: #666; font-size: 14px; margin-bottom: 12px;"><strong>2021</strong></p>
+                        <p style="color: #666; font-size: 14px; line-height: 1.6; flex-grow: 1;">Qualified <strong>JAM in Physics</strong>, demonstrating strong command in fundamental and applied physics.</p>
+                     </div>
+                  </div>
                </div>
             </div>
-         </div> 
-      </div>
-   </div>
-</div>
+         </div>      
       </section>
       <!-- =========================
-        END ACCORDION SECTION
+        END FELLOWSHIPS & AWARDS SECTION
       ============================== -->
 
  
@@ -653,6 +812,453 @@ a:hover, a:focus {
          .blog-text ul li:after {
     display: none;
 }
+
+/* Vertical Timeline Styles */
+.timeline-vertical {
+    position: relative;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.timeline-vertical::before {
+    content: '';
+    position: absolute;
+    left: 60px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #1BB580, #1BB580);
+    z-index: 1;
+    border-radius: 2px;
+}
+
+.timeline-item-v {
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 180px;
+    text-align: left;
+}
+
+.timeline-marker-v {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.timeline-dot-v {
+    width: 28px;
+    height: 28px;
+    background: white;
+    border: 3px solid #1BB580;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px white, inset 0 0 0 0px #ddd;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    margin-left: 26px;
+}
+
+.timeline-dot-v::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.timeline-dot-current {
+    background: #1BB580;
+    border: 3px solid #1BB580;
+    box-shadow: 0 0 0 4px rgba(27, 181, 128, 0.1), 0 0 15px rgba(27, 181, 128, 0.4);
+}
+
+.timeline-dot-current::after {
+    opacity: 1;
+    background: white;
+}
+
+.timeline-item-v:hover .timeline-dot-v:not(.timeline-dot-current) {
+    border-color: #1BB580;
+    background: #f0faf8;
+    box-shadow: 0 0 0 4px rgba(27, 181, 128, 0.15), 0 0 10px rgba(27, 181, 128, 0.3);
+}
+
+.timeline-item-v:hover .timeline-dot-v:not(.timeline-dot-current)::after {
+    opacity: 1;
+    background: #1BB580;
+}
+
+.timeline-content-v {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #1BB580;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline-content-v::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #1BB580, transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.timeline-content-current {
+    background: linear-gradient(135deg, #f8fffe 0%, #f0faf8 100%);
+    border-left: 4px solid #1BB580;
+    box-shadow: 0 4px 20px rgba(27, 181, 128, 0.15);
+}
+
+.timeline-content-current::before {
+    opacity: 1;
+}
+
+.timeline-content-v:hover {
+    box-shadow: 0 8px 24px rgba(27, 181, 128, 0.2);
+    transform: translateX(8px);
+    border-left: 4px solid #1BB580;
+}
+
+.timeline-content-v:hover::before {
+    opacity: 1;
+}
+
+.timeline-header-v {
+    margin-bottom: 14px;
+}
+
+.timeline-header-v h3 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #1BB580;
+    margin: 0 0 8px 0;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.3px;
+}
+
+.timeline-year-v {
+    display: block;
+    font-size: 13px;
+    color: #aaa;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.timeline-body-v {
+    flex-grow: 1;
+}
+
+.timeline-body-v h4 {
+    font-size: 16px;
+    color: #222;
+    margin: 10px 0 5px 0;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.timeline-desc-v {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin: 5px 0;
+    font-family: 'Droid Serif', serif;
+}
+
+.timeline-desc-v strong {
+    color: #1BB580;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+    .timeline-vertical {
+        padding: 40px 0;
+    }
+    
+    .timeline-vertical::before {
+        left: 30px;
+    }
+    
+    .timeline-item-v {
+        padding-left: 100px;
+        margin-bottom: 40px;
+    }
+    
+    .timeline-marker-v {
+        left: 0;
+    }
+    
+    .timeline-dot-v {
+        margin-left: 16px;
+    }
+    
+    .timeline-header-v h3 {
+        font-size: 17px;
+    }
+    
+    .timeline-body-v h4 {
+        font-size: 15px;
+    }
+}
+
+/* Enhanced Horizontal Timeline Styles */
+.timeline-horizontal {
+    position: relative;
+    padding: 80px 0 60px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.timeline-horizontal::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 2%;
+    right: 2%;
+    height: 4px;
+    background: linear-gradient(to right, #e0e0e0, #1BB580 25%, #1BB580 75%, #e0e0e0);
+    z-index: 1;
+    border-radius: 2px;
+}
+
+.timeline-item-h {
+    flex: 1;
+    position: relative;
+    margin: 0 10px;
+    text-align: center;
+    min-width: 200px;
+}
+
+.timeline-marker-h {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.timeline-dot-h {
+    width: 28px;
+    height: 28px;
+    background: white;
+    border: 3px solid #d0d0d0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px white, inset 0 0 0 0px #ddd;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.timeline-dot-h::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: #999;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.timeline-dot-current {
+    background: #1BB580;
+    border: 3px solid #1BB580;
+    box-shadow: 0 0 0 4px rgba(27, 181, 128, 0.1), 0 0 15px rgba(27, 181, 128, 0.4);
+}
+
+.timeline-dot-current::after {
+    opacity: 1;
+    background: white;
+}
+
+.timeline-item-h:hover .timeline-dot-h:not(.timeline-dot-current) {
+    border-color: #1BB580;
+    box-shadow: 0 0 0 4px rgba(27, 181, 128, 0.15), 0 0 10px rgba(27, 181, 128, 0.3);
+}
+
+.timeline-item-h:hover .timeline-dot-h:not(.timeline-dot-current)::after {
+    opacity: 1;
+    background: #1BB580;
+}
+
+.timeline-content-h {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid #e0e0e0;
+   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+   min-height: 280px;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   flex: 1 1 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline-content-h::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #1BB580, transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.timeline-content-current {
+    background: linear-gradient(135deg, #f8fffe 0%, #f0faf8 100%);
+    border-top: 4px solid #1BB580;
+    box-shadow: 0 4px 20px rgba(27, 181, 128, 0.15);
+    border-left: 2px solid #1BB580;
+}
+
+.timeline-content-current::before {
+    opacity: 1;
+}
+
+.timeline-content-h:hover {
+    box-shadow: 0 8px 24px rgba(27, 181, 128, 0.2);
+    transform: translateY(-8px);
+    border-top: 4px solid #1BB580;
+}
+
+.timeline-content-h:hover::before {
+    opacity: 1;
+}
+
+.timeline-header-h {
+    margin-bottom: 14px;
+}
+
+.timeline-header-h h3 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #1BB580;
+    margin: 0 0 8px 0;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.3px;
+}
+
+.timeline-year-h {
+    display: block;
+    font-size: 13px;
+    color: #aaa;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.timeline-body-h {
+    flex-grow: 1;
+}
+
+.timeline-body-h h4 {
+    font-size: 16px;
+    color: #222;
+    margin: 10px 0 5px 0;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.timeline-desc-h {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin: 5px 0;
+    font-family: 'Droid Serif', serif;
+}
+
+.timeline-desc-h strong {
+    color: #1BB580;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 1200px) {
+    .timeline-horizontal {
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 60px 0 40px 0;
+    }
+    
+    .timeline-horizontal::before {
+        top: 35px;
+        left: 2.5%;
+        right: 2.5%;
+    }
+    
+   .timeline-item-h {
+      flex: 0 0 calc(50% - 40px);
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+   }
+}
+
+@media only screen and (max-width: 768px) {
+    .timeline-horizontal {
+        flex-direction: column;
+        padding: 40px 0;
+        gap: 0;
+    }
+    
+    .timeline-horizontal::before {
+        top: 0;
+        left: 30px;
+        right: auto;
+        width: 4px;
+        height: 100%;
+    }
+    
+    .timeline-item-h {
+        margin-left: 80px;
+        margin-right: 0;
+        text-align: left;
+        margin-bottom: 50px;
+        min-width: auto;
+    }
+    
+    .timeline-marker-h {
+        position: absolute;
+        left: -68px;
+        top: 0;
+        margin-bottom: 0;
+    }
+    
+    .timeline-content-h {
+        min-height: auto;
+        margin-top: 10px;
+    }
+    
+    .timeline-header-h h3 {
+        font-size: 15px;
+    }
+}
+
          .ul-class{
             color: black;
     font-weight: bold;
